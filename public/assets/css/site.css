@@ -748,6 +748,72 @@ textarea.input { resize: vertical; }
     .site-footer__grid > div:last-child { grid-column: 1 / -1; }
 }
 
+/* ---------- Téléphone : typographie resserrée et en-tête d'accueil ---------- */
+@media (max-width: 640px) {
+    body { font-size: 15px; }
+    .section { padding: 34px 0; }
+    .section-title { font-size: 20px; line-height: 1.2; }
+    .section-head { align-items: center; margin-bottom: 14px; }
+    .lead { margin-top: 8px; font-size: 15px; line-height: 1.6; }
+    .split__intro .link-arrow { margin-top: 10px; }
+
+    /* En-tête : la photo passe en fond, le texte occupe toute la largeur */
+    .hero { padding: 26px 0 56px; }
+    .hero__grid { display: block; }
+    .hero__text { display: flex; position: relative; z-index: 1; gap: 12px; }
+    .hero__title { font-size: 24px; line-height: 1.15; }
+    .hero__lead { font-size: 14.5px; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    .hero__actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; margin-top: 4px; }
+    .hero__actions .btn { min-height: 42px; padding: 0 10px; font-size: 13px; gap: 6px; white-space: normal; text-align: center; line-height: 1.2; }
+    .hero__actions .btn .icon { display: none; }
+    .hero__figure { position: absolute; inset: 0; z-index: 0; aspect-ratio: auto; max-height: none; border: 0; border-radius: 0; box-shadow: none; }
+    .hero__figure::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(21, 49, 95, .80) 0%, rgba(21, 49, 95, .92) 70%, rgba(21, 49, 95, .97) 100%); }
+    .hero__mosaic { display: grid; padding: 8px; gap: 8px; background: transparent; opacity: .55; }
+    .hero__tile, .hero__tile--logo { display: flex; border-radius: 14px; }
+    .hero__tile--logo .logo { width: 60%; }
+
+    .reperes { margin-top: -30px; }
+    .repere { flex-basis: 36%; padding: 14px 12px; }
+    .repere__valeur { font-size: 23px; }
+    .repere__libelle { font-size: 12.5px; }
+
+    /* Cartes plus courtes */
+    .pilier, .valeurs > .valeur { flex-basis: 78%; }
+    .pilier { padding: 14px; }
+    .pilier__title { font-size: 15.5px; margin-bottom: 4px; }
+    .pilier__text { font-size: 14px; line-height: 1.5; }
+    .valeur { padding: 16px; }
+    .valeur__top { margin: 0; }
+    .valeur__num { display: none; }
+    .valeur__icon { width: 40px; height: 40px; border-radius: 12px; }
+    .valeur__title { font-size: 15px; line-height: 1.3; }
+    .valeur p { font-size: 13.5px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; flex-grow: 0; }
+    .domaine-card__title { font-size: 13.5px; }
+    .card-projet__media, .card-actu__media { aspect-ratio: 16 / 10; }
+    .card-projet .kicker, .card-actu .kicker { display: none; }
+    .card-projet__title, .card-actu__title, .card-actu--grand .card-actu__title { font-size: 13.5px; }
+    .card-projet__text, .card-actu__text { font-size: 12.5px; -webkit-line-clamp: 2; }
+    .card-projet__bailleurs { font-size: 11.5px; }
+
+    /* Recherche, appel à l'action, pied de page */
+    .section--navy .lead { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    .checks { margin: 16px 0 18px; gap: 10px; }
+    .checks li { font-size: 14px; gap: 10px; }
+    .checks__icon { width: 22px; height: 22px; }
+    .consortium__title { font-size: 17px; }
+    .consortium__list strong { font-size: 14.5px; }
+    .consortium__code { width: 38px; height: 38px; font-size: 12px; border-radius: 10px; }
+    .cta { padding: 34px 0; }
+    .cta__title { font-size: 19px; }
+    .cta__text { font-size: 14.5px; }
+    .cta__infos dd { font-size: 14.5px; }
+    .cta__infos dt { font-size: 11.5px; }
+    .site-footer { padding: 36px 0 22px; font-size: 14px; }
+    .site-footer__about p { font-size: 14px; }
+    .site-footer ul { gap: 8px; }
+    .btn { font-size: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
