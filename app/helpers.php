@@ -309,3 +309,22 @@ function monogramme(?string $sigle, string $nom): string
     }
     return mb_strtoupper(mb_substr($initiales !== '' ? $initiales : $nom, 0, 3));
 }
+
+/**
+ * Illustration provisoire (public/assets/img/illustrations) affichée tant
+ * qu'aucune photo n'est associée au contenu. Choisie d'après le pictogramme du domaine.
+ */
+function illustration(?string $icone): string
+{
+    $fichiers = [
+        'shield'    => 'desinformation',
+        'radio'     => 'medias',
+        'education' => 'education',
+        'music'     => 'culture',
+        'women'     => 'genre',
+        'leaf'      => 'ressources',
+        'flask'     => 'recherche',
+        'accueil'   => 'accueil',
+    ];
+    return asset('img/illustrations/' . ($fichiers[(string) $icone] ?? 'rencontre') . '.svg');
+}

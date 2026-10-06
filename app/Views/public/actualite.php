@@ -7,8 +7,7 @@ use App\Core\View;
 <article>
     <section class="page-hero page-hero--article">
         <div class="wrap wrap--narrow">
-            <?= View::partial('partials/public/retour', ['href' => '/actualites']) ?>
-            <p class="detail-hero__tags"><span class="tag tag--static tag--domaine"><?= e($activite['categorie']) ?></span></p>
+                        <p class="detail-hero__tags"><?= View::partial('partials/public/retour', ['href' => '/actualites']) ?><span class="tag tag--static tag--domaine"><?= e($activite['categorie']) ?></span></p>
             <h1 class="page-hero__title"><?= e($activite['titre']) ?></h1>
             <p class="article-meta">
                 <span><?= icon('calendar', 18) ?> <?= e(date_fr((string) $activite['date_activite'])) ?></span>

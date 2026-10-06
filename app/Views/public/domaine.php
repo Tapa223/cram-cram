@@ -7,8 +7,7 @@ use App\Core\View;
 <section class="detail-hero">
     <div class="wrap detail-hero__grid">
         <div class="reveal">
-            <?= View::partial('partials/public/retour', ['href' => '/domaines-action']) ?>
-            <p class="detail-hero__tags"><span class="tag tag--static tag--domaine"><?= icon(domaine_icone($domaine['slug']), 16) ?> Domaine <?= str_pad((string) $numero, 2, '0', STR_PAD_LEFT) ?></span></p>
+                        <p class="detail-hero__tags"><?= View::partial('partials/public/retour', ['href' => '/domaines-action']) ?><span class="tag tag--static tag--domaine"><?= icon(domaine_icone($domaine['slug']), 16) ?> Domaine <?= str_pad((string) $numero, 2, '0', STR_PAD_LEFT) ?></span></p>
             <h1 class="page-hero__title"><?= e($domaine['titre']) ?></h1>
             <p class="page-hero__lead"><?= e($domaine['resume']) ?></p>
         </div>

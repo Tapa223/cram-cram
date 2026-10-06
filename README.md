@@ -149,7 +149,7 @@ Toutes les interfaces s'adaptent au mobile ; les formulaires fonctionnent aussi 
 Les contenus chargés proviennent du document de référence. Aucune donnée chiffrée n'a été inventée.
 
 - **Logo officiel** : remplacer `public/assets/img/logo.svg` (version couleur), `logo-blanc.svg` (version sur fond bleu) et `favicon.svg` par les fichiers officiels, en gardant les mêmes noms. Le logo est utilisé partout à partir de ces fichiers.
-- **Image de l'accueil** : à choisir dans *Paramètres › Page d'accueil* (une composition graphique s'affiche en attendant).
+- **Image de l'accueil et photos** : des illustrations provisoires aux couleurs de la charte (`public/assets/img/illustrations/`) s'affichent tant qu'aucune photo n'est fournie. Elles disparaissent automatiquement dès qu'une photo est choisie dans *Paramètres › Page d'accueil* ou associée à un domaine, un projet ou une activité.
 - **Photos de terrain** : à téléverser dans les galeries des projets, domaines et activités, ou dans *Médias* (photos réelles et consenties).
 - **Logos des partenaires** : à ajouter dans *Partenaires* (les initiales s'affichent en attendant).
 - **Statuts et dates des projets** : laissés « non précisés », à renseigner dans *Projets*.

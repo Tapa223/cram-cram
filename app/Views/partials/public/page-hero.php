@@ -8,10 +8,10 @@
 ?>
 <section class="page-hero">
     <div class="wrap page-hero__inner">
-        <?= \App\Core\View::partial('partials/public/retour', ['href' => $retour ?? '/']) ?>
-        <div class="page-hero__text">
+        <div class="page-hero__row">
+            <?= \App\Core\View::partial('partials/public/retour', ['href' => $retour ?? '/']) ?>
             <h1 class="page-hero__title"><?= e($titre) ?></h1>
-            <?php if (!empty($chapo)): ?><p class="page-hero__lead"><?= e($chapo) ?></p><?php endif; ?>
         </div>
+        <?php if (!empty($chapo)): ?><p class="page-hero__lead"><?= e($chapo) ?></p><?php endif; ?>
     </div>
 </section>

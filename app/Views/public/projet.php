@@ -10,8 +10,7 @@ $periode = periode_projet($projet['date_debut'], $projet['date_fin']);
 <section class="detail-hero">
     <div class="wrap detail-hero__grid">
         <div class="reveal">
-            <?= View::partial('partials/public/retour', ['href' => '/projets']) ?>
-            <p class="detail-hero__tags">
+                        <p class="detail-hero__tags"><?= View::partial('partials/public/retour', ['href' => '/projets']) ?>
                 <?php if ($projet['statut']): ?><span class="tag tag--<?= e($projet['statut']) ?> tag--static"><?= e(Projet::STATUTS[$projet['statut']]) ?></span><?php endif; ?>
                 <?php if ($projet['domaine_titre']): ?><a class="tag tag--static tag--domaine" href="<?= e(url('/domaines-action/' . $projet['domaine_slug'])) ?>"><?= e($projet['domaine_titre']) ?></a><?php endif; ?>
             </p>

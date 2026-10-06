@@ -30,20 +30,7 @@ for ($n = 1; $n <= 3; $n++) {
             <?php if ($imageAccueil): ?>
                 <img class="hero__photo" src="<?= e(upload_url((string) $imageAccueil['fichier'])) ?>" alt="<?= e((string) ($imageAccueil['texte_alt'] ?: '')) ?>" decoding="async" fetchpriority="high">
             <?php else: ?>
-                <?php
-                $tuiles = array_map(static fn (array $d): string => domaine_icone($d['slug']), array_slice($domaines, 0, 8));
-                $tuiles = array_slice(array_merge($tuiles, ['handshake', 'globe', 'network', 'peace']), 0, 8);
-                array_splice($tuiles, 4, 0, ['logo']);
-                ?>
-                <div class="hero__mosaic" aria-hidden="true">
-                    <?php foreach ($tuiles as $i => $t): ?>
-                        <?php if ($t === 'logo'): ?>
-                            <span class="hero__tile hero__tile--logo"><?= logo(96, true) ?></span>
-                        <?php else: ?>
-                            <span class="hero__tile hero__tile--<?= $i % 3 ?>"><?= icon($t, 30) ?></span>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </div>
+                <img class="hero__photo hero__photo--illus" src="<?= e(illustration('accueil')) ?>" alt="" decoding="async" fetchpriority="high">
             <?php endif; ?>
             <?php if (setting('accueil_encart_valeur') !== ''): ?>
                 <figcaption class="hero__caption">
