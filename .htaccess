@@ -1,0 +1,27 @@
+# ============================================================
+# CRAM-CRAM Mali — racine du projet
+# Seul le dossier public/ doit être accessible depuis le web.
+# Sur LWS, l'idéal est de faire pointer le domaine vers /public.
+# Sinon (et sous XAMPP), ce fichier redirige tout vers /public
+# et bloque l'accès aux dossiers sensibles.
+# ============================================================
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Blocage explicite des dossiers et fichiers internes
+    RewriteRule ^(app|bootstrap|bin|database|routes|storage|vendor)(/|$) - [F,L]
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^(composer\.(json|lock)|README\.md)$ - [F,L]
+
+    # Tout le reste est servi par public/
+    RewriteRule ^$ public/ [L]
+    RewriteCond %{REQUEST_URI} !/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<FilesMatch "^\.(env|git)|\.(sql|log|md|lock)$">
+    Require all denied
+</FilesMatch>

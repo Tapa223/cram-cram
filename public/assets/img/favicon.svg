@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="CRAM-CRAM">
+  <!-- Logo provisoire : remplacer ce fichier par le logo officiel (même nom, format SVG ou PNG). -->
+  <circle cx="60" cy="60" r="60" fill="#1B4E9B"/>
+  <circle cx="60" cy="60" r="51" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/>
+  <text x="60" y="56" text-anchor="middle" font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="25" fill="#FFFFFF" letter-spacing=".5">cram</text>
+  <text x="60" y="83" text-anchor="middle" font-family="Montserrat, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="25" fill="#E7EEF7" letter-spacing=".5">cram</text>
+</svg>

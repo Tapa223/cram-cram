@@ -1,0 +1,18 @@
+# Configuration locale et secrets
+.env
+
+# Dépendances Composer (aucune requise pour le moment)
+/vendor/
+
+# Fichiers téléversés et journaux (propres à chaque installation)
+/public/uploads/*
+!/public/uploads/.htaccess
+!/public/uploads/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# Systèmes et éditeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

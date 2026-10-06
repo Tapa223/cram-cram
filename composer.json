@@ -1,0 +1,23 @@
+{
+    "name": "cramcram/site",
+    "description": "Site institutionnel et administration de CRAM-CRAM Mali",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-fileinfo": "*",
+        "ext-mbstring": "*",
+        "ext-dom": "*"
+    },
+    "suggest": {
+        "ext-gd": "Réencodage et redimensionnement des images téléversées",
+        "ext-intl": "Meilleure génération des adresses (slugs)"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
